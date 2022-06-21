@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <title>Tabela teste</title>
+        <meta charset="UTF-8">
+
+        <style>
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                empty-cells: hide;
+                border: 2px dashed gray;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            }
+
+            thead {
+                color:black;
+                background-color:lightblue;
+                font-size: 13pt;
+            }
+
+            tbody {
+                font-weight:500;
+                font-size: 14pt;
+                text-align: center;
+            }
+
+            tbody tr:nth-child(even) {
+                background-color:lightgray
+            }
+
+            tbody tr:hover {
+                background-color: lightyellow;
+            }
+
+            tfoot {
+                color: black;
+                background-color: lightblue;
+                font-size: 10pt;
+                text-align: left;
+            }
+
+            tr, td, th {
+                border: 2px solid gray;
+            }
+           
+            caption {
+                caption-side: bottom;
+                font-size: 10pt;
+            }
+        </style>
+
+    </head>
+
+    <body>
+
+        <table border="2">
+            <caption>Tabela 1. Relação de clientes da FCK Businesses</caption>
+            <thead>
+                <tr>
+                    <th rowspan="2">Nome</th>
+                    <th colspan="5">Endereço</th>
+                
+                    <th rowspan="2">Telefone</th>
+                </tr>
+
+                <tr>
+                    
+                    <th>Rua</th>
+                    <th>Número</th>
+                    <th>Cidade</th>
+                    <th>Estado</th>
+                    <th>CEP</th>
+                    
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Amarildo</td>
+                    <td>Rua Minas Gerais</td>
+                    <td>55</td>
+                    <td>Salvador</td>
+                    <td>Bahia</td>
+                    <td>41810-700</td>
+                    <td>+55 71 3233-4444</td>
+                </tr>
+
+                <tr>
+                    <td>Souto</td>
+                    <td>Rua Bahia</td>
+                    <td>132</td>
+                    <td>Salvador</td>
+                    <td>Bahia</td>
+                    <td>41800-080</td>
+                    <td>+55 71 3333-4344</td>
+                </tr>
+
+                <tr>
+                    <td>José</td>
+                    <td>Rua Bahia</td>
+                    <td>220</td>
+                    <td>Salvador</td>
+                    <td>Bahia</td>
+                    <td>41800-100</td>
+                    <td>+55 71 3441-4344</td>
+                </tr>
+
+                <tr>
+                    <td>Josias</td>
+                    <td>Rua Chile</td>
+                    <td>122</td>
+                    <td>Salvador</td>
+                    <td>Bahia</td>
+                    <td>40800-000</td>
+                    <td>+55 71 3222-4344</td>
+                </tr>
+            </tbody>
+
+            <tfoot>
+                <tr>
+                    <td colspan="7">Para maiores informações entre em contato conosco pelo telefone <span style="color:red">+55 71 3322-1199</span></td>
+                </tr>
+    
+            </tfoot>
+        </table>
+
+
+    </body>
+
+
+</html>
