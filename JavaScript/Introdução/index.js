@@ -1,7 +1,3 @@
-/*alert('Olá! Seja bem-vindo!');
-document.querySelector('#t1').textContent = 'Cecília é Bocó';
-document.querySelector('#t2').textContent = 'Cecília é Gostosona';*/
-
 // apresenta uma mensagem e esconde o formulário de login. Para fazer comentário no js usamos //
 
 function bemVindo(){

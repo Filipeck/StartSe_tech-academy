@@ -1,0 +1,31 @@
+No JS declaramos variáveis e constantes da seguinte forma:
+let - para variáveis
+const - para constantes
+o símbolo de = significa atribuição.
+
+Ao declararmos uma let/const não podemos iniciar com numeros, nem usar caracteres especiais, espaço, hífen,também não podemos usar as palavras reservadas (por ex: let, const, function, if, while).
+
+Se quisermos declarar mais de uma variável/constante, podemos usar a "," para declarar na mesma linha, por ex:
+let a, b, c;
+ou
+const a = 3, b = 2, c = 4;
+
+
+
+Operadores Aritméticos
+
++ > usado para soma de números ou também para concatenar strings( por ex: msg = 'Olá' + 'Carlos' + 'Tudo bem?';
+
+- > usado para subtração
+* > usado para multiplicação
+/ > usado para divisão
+% > usado para resto de divisão (resto 0 é par 1 é ímpar)
+** > usado para potenciação/exponenciação
+_____________________________________________
+
+Operadores de Atribuição
+= > atribui um valor para uma variável, constante, strings, etc.
+
+*= > atribui o valor de multiplicação, ou seja, x *= y, fica x = x*y
+
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators
