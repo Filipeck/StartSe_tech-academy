@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Aplicado</title>
+</head>
+<body>
+    <h1 id="t1">Introdução à linguagem Javascript</h1>
+    <h3 id="t2">Primeiros passos com a linguagem</h3>
+    <form action="" id="formulariologin" onsubmit="bemVindo(); return false"> 
+        <input type="text" id="nomeUsuario" placeholder="Usuário">
+        <input type="password" placeholder="Senha">
+        <button type="submit">Entrar</button>
+
+    </form>
+
+    <p>Escolha uma cor de fundo:</p>
+    <select name="" id="coresFundo" onchange="mudaCorFundo()">
+        <option value="white">Branco</option>
+        <option value="blue">Azul</option>
+        <option value="yellow">Amarelo</option>
+        <option value="red">Vermelho</option>
+    </select>
+
+    <button onclick="print()">Imprimir</button>
+
+    <p>Conversão de KM para MILHA</p>
+    <input type="text" id="valorKM" size="1" value="1"> KM = <b><span id="resultado">1.609 </span> Milhas</b>
+    <button type="button" id="botaoCalcular" onclick="calcularMilha()">Calcular</button>
+    
+    <script src="index.js"></script>
+</body>
+</html>
