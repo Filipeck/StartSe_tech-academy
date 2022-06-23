@@ -2,10 +2,12 @@ const listaTarefas = document.querySelector('#listaTarefas');
 const caixaTexto = document.querySelector('#caixaDeTexto');
 const botaoAdicionar = document.querySelector('#botaoAdicionar');
 
+
+//LISTENER - SEMPRE QUE O BOTAO ADICIONAR FOR CLICADO
+// ADICIONA UM ITEM OU UMA TAREFA NA LISTA
 botaoAdicionar.addEventListener('click', function(){
     const textoDaTarefa = caixaTexto.value;
     caixaTexto.value = '';
-
     listaTarefas.appendChild(adicionaTarefa(textoDaTarefa));
     caixaTexto.focus();
 });
@@ -17,8 +19,21 @@ function adicionaTarefa(textoDaTarefa){
     elementoSPAN.setAttribute('id','tarefa');
     elementoSPAN.textContent = textoDaTarefa;
 
+    elementoLI.className = 'naoRealizada';
     elementoLI.appendChild(elementoSPAN);
     elementoLI.appendChild(adicionaBotaoRemover());
+
+    //Listener - SEMPRE QUE UM ITEM DA LISTA FOR CLICADO PELO MOUSE
+    // ALTERA O MARCADOR, A COR DA FONTE E RISCA O TEXTO
+    elementoSPAN.addEventListener('click', function() {
+        if(this.id === 'tarefa') {
+            if(this.parentNode.className === 'naoRealizada'){
+                this.parentNode.className = 'realizada'
+            } else {
+                this.parentNode.className = 'naoRealizada'
+            }
+        }
+    });
 
     return elementoLI;
 }
@@ -28,6 +43,8 @@ function adicionaBotaoRemover(){
     botaoRemover.textContent = '✖';
     botaoRemover.className = 'remover';
 
+    //Listener - SEMPRE QUE O BOTAO REMOVER FOR CLICADO PELO MOUSE
+    // REMOVE UM ITEM DA LISTA
     botaoRemover.addEventListener('click', function(){
         listaTarefas.removeChild(this.parentNode); //aqui definimos que queremos remover o nó pai do button, o li no qual ele se encontra.
        }
