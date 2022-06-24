@@ -1,6 +1,7 @@
 const listaTarefas = document.querySelector('#listaTarefas');
 const caixaTexto = document.querySelector('#caixaDeTexto');
 const botaoAdicionar = document.querySelector('#botaoAdicionar');
+const listaSuspensa = document.querySelector('#listaSuspensa');
 
 
 //LISTENER - SEMPRE QUE O BOTAO ADICIONAR FOR CLICADO
@@ -9,6 +10,7 @@ botaoAdicionar.addEventListener('click', function(){
     const textoDaTarefa = caixaTexto.value;
     caixaTexto.value = '';
     listaTarefas.appendChild(adicionaTarefa(textoDaTarefa));
+    exibeOcultaListaSuspensa();
     caixaTexto.focus();
 });
 
@@ -47,8 +49,32 @@ function adicionaBotaoRemover(){
     // REMOVE UM ITEM DA LISTA
     botaoRemover.addEventListener('click', function(){
         listaTarefas.removeChild(this.parentNode); //aqui definimos que queremos remover o nó pai do button, o li no qual ele se encontra.
-       }
+        exibeOcultaListaSuspensa();
+        }
     );
 
     return botaoRemover;
 }
+
+function exibeOcultaListaSuspensa() {
+    const elementoSPAN = document.querySelector('#tarefa');
+    if(elementoSPAN === null) {
+        listaSuspensa.setAttribute('hidden','hidden');
+    } else {
+        listaSuspensa.removeAttribute('hidden');
+    }
+}
+
+listaSuspensa.addEventListener('change',function(){
+    if(listaSuspensa.selectedIndex === 1 || listaSuspensa.selectedIndex === 2) {
+        const vetorTarefas = listaTarefas.querySelectorAll('#tarefa'); //selecionar todos os elementos do documento onde a id é #tarefa
+        for(tarefa of vetorTarefas) {
+            tarefa.dispatchEvent(new Event('click'));
+        }
+    } else if(listaSuspensa.selectedIndex === 3) {
+        const vetorBotoes = listaTarefas.querySelectorAll('.remover');
+        for(botao of vetorBotoes) {
+            botao.dispatchEvent(new Event('click'));
+        }
+}
+});
