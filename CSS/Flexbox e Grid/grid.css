@@ -1,0 +1,13 @@
+body, 
+p{
+    padding: 0;
+    margin: 0;
+    font-size: 1.5rem;
+    font-style: italic;
+    color: dimgray;
+    text-align: center;
+}
+
+.grind-container{
+    width: 80%;
+}

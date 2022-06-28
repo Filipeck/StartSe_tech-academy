@@ -1,0 +1,17 @@
+.flex-container{
+    display: flex;
+    background-color: gold;
+    justify-content: center; /*flex-end, flext-start, space-between, space-evenly*/
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+}
+
+.flex-container > div{
+    background-color: darkslateblue;
+    color: white;
+    margin: 10px;
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    /* width: 100px; */
+}
