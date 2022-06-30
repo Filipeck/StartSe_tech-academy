@@ -11,7 +11,23 @@ h1,h3{
 h1{
     font-size: 36pt;
 }
-.card{
+
+a{
+    text-decoration: none;
+    color: darkorange;
+    
+}
+
+ul{
+    width: 200px;
+}
+
+li{
+    font-size: 16pt;
+    text-shadow: 4px 4px 5px lightgray;
+}
+
+#card{
     width: 800px;
     height: 450px;
     box-sizing: border-box;
@@ -21,4 +37,21 @@ h1{
     background: url(./images/background.webp) no-repeat;
     background-size: cover;
    
+}
+
+.whatsapp{
+    list-style-image: url(./images/WhatsApp_s.png);
+}
+
+.instagram{
+    list-style-image: url(./images/Instagram_s.png);
+}
+
+.email{
+    list-style-image: url(./images/gmail_logo.png);
+}
+
+.img {
+    background-color: blue;
+    margin-left: 100%;  
 }
