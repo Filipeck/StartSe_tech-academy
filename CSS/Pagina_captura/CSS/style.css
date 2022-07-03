@@ -28,7 +28,7 @@ section{
     padding: 20px;
     background-image: url('../images/people.jpg');
     background-size: cover;
-    overflow: hidden;
+    overflow: hidden;   
 }
 
 .formcontainer{
@@ -69,4 +69,30 @@ input[type="submit"]{
     color: white;
     background-color: #48c5ce;
     font-weight: bold;
+}
+
+footer{
+    background-color: #202121;
+    padding: 40px;
+    text-align: center;
+}
+
+.picture{
+    width: 160px;
+}
+
+.description{
+    color: white;
+    display: inline-block;
+    max-width: 40%;
+    text-align: left;
+    margin-left: 40px;
+}
+
+.description h3, .description p{
+    margin-bottom: 20px;
+}
+
+.description h3{
+    font-size: 24px;
 }
