@@ -7,7 +7,7 @@ class Financiamento{
     constructor(valor, entrada, taxaJuros, prazo){
         this.#taxaJuros = taxaJuros;
         this.#prazo = prazo;
-        this.#parcelas.push(new Parcela(0,0,0,0,valor -entrada));
+        this.#parcelas.push(new Parcela(0,0,0,0,valor -entrada)); //1º elemento armazenará apenas o saldo devedor
     }
 
     static calcJuros(valor,taxaJuros) {
@@ -25,6 +25,17 @@ class Financiamento{
             saldo -= amortizacao;
             if (saldo < 0) {saldo = 0};
             this.#parcelas.push(new Parcela(numero,valor,juros,amortizacao,saldo));
+        }
+    }
+
+    exibeParcelas() {
+        const parcelas = this.#parcelas.slice(1);
+        for(const parcela of parcelas) {
+            const linha = corpoTabela.insertRow(-1); //inserir linha vazia ao final tabela
+            for(const dado of parcela.getDadosFormatados()) {
+                const celula = linha.insertCell(-1);
+                celula.textContent = dado;
+            }
         }
     }
 }
