@@ -11,5 +11,8 @@ export class Parcela{
         this.#amortizacao = amortizacao;
         this.#saldo = saldo;
     }
-    
+
+    getSaldo() {
+        return this.#saldo;
+    }
 }
