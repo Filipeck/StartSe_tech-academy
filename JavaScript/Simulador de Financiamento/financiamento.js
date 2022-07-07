@@ -1,6 +1,6 @@
 import {Parcela} from './parcela.js';
 
-class Financiamento{
+export class Financiamento{
     #taxaJuros; //Juros mensais
     #prazo; //em meses
     #parcelas = [];
@@ -38,4 +38,4 @@ class Financiamento{
             }
         }
     }
-}
+};
